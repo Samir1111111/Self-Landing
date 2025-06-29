@@ -33,55 +33,81 @@
 
   <section class="benefits" id="features">
     <h2>Características principales</h2>
-    <div class="benefit-list">
-      <div class="benefit-item">
-        <img src="assets/icon-payment.png" alt="Ícono de pagos" class="benefit-icon">
-        <p>Procesamiento eficiente de transacciones y pagos</p>
+    <p class="benefits-subtitle">Diseñado para optimizar tu operación desde el primer uso</p>
+
+    <ul class="benefit-list-alt">
+      <li>
+        <img src="assets/icono-pagos.png" alt="Pagos" class="benefit-icon-alt" />
+        <div>
+          <h3>Transacciones rápidas</h3>
+          <p>Procesamiento eficiente de pagos con múltiples métodos integrados.</p>
+        </div>
+      </li>
+      <li>
+        <img src="assets/icono-seguridad.png" alt="Seguridad" class="benefit-icon-alt" />
+        <div>
+          <h3>Seguridad avanzada</h3>
+          <p>Cifrado y controles de acceso que protegen tu información en todo momento.</p>
+        </div>
+      </li>
+      <li>
+        <img src="assets/icono-diseño.png" alt="Diseño" class="benefit-icon-alt" />
+        <div>
+          <h3>Diseño intuitivo</h3>
+          <p>Experiencia de usuario simple, clara y accesible para todos.</p>
+        </div>
+      </li>
+      <li>
+        <img src="assets/icono-automatizacion.png" alt="Automatización" class="benefit-icon-alt" />
+        <div>
+          <h3>Automatización inteligente</h3>
+          <p>Disminución de costos operativos mediante procesos autónomos y eficientes.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+
+
+    <section class="specs-interactive" id="specs">
+    <h2>Especificaciones</h2>
+    <div class="specs-wrapper">
+      <img src="assets/kiosco.png" alt="Kiosco Self" class="specs-image">
+
+      <!-- IZQUIERDA -->
+      <div class="spec-box left top" onclick="toggleSpec(this)">
+        <span>Pantalla táctil</span>
+        <p class="hidden">15.6" Full HD capacitiva para una interacción intuitiva.</p>
       </div>
-      <div class="benefit-item">
-        <img src="assets/icon-security.png" alt="Ícono de seguridad" class="benefit-icon">
-        <p>Seguridad de datos cifrada y confiable</p>
+
+      <div class="spec-box left middle" onclick="toggleSpec(this)">
+        <span>Procesador</span>
+        <p class="hidden">Quad-core, 4GB RAM y SSD de 64GB para alto rendimiento.</p>
       </div>
-      <div class="benefit-item">
-        <img src="assets/icon-design.png" alt="Ícono de diseño" class="benefit-icon">
-        <p>Diseño simple para una navegación rápida y sencilla</p>
+
+      <div class="spec-box right top" onclick="toggleSpec(this)">
+        <span>Alimentación</span>
+        <p class="hidden">110–240V con protección contra sobretensiones.</p>
       </div>
-      <div class="benefit-item">
-        <img src="assets/icon-cost.png" alt="Ícono de automatización" class="benefit-icon">
-        <p>Reduce costos operativos mediante automatización</p>
+
+      <!-- DERECHA -->
+      <div class="spec-box left bottom" onclick="toggleSpec(this)">
+        <span>Conectividad</span>
+        <p class="hidden">Wi-Fi, Ethernet y módulo 4G opcional.</p>
+      </div>
+
+      <div class="spec-box right middle" onclick="toggleSpec(this)">
+        <span>Impresora</span>
+        <p class="hidden">Térmica de 80mm con corte automático.</p>
+      </div>
+
+      <div class="spec-box right bottom" onclick="toggleSpec(this)">
+        <span>Módulos adicionales</span>
+        <p class="hidden">NFC, escáner de códigos o lector de huellas.</p>
       </div>
     </div>
   </section>
 
-  <section class="specs" id="specs">
-    <h2>Especificaciones técnicas</h2>
-    <div class="specs-grid">
-      <div class="spec-item">
-        <h3>Pantalla táctil</h3>
-        <p>15.6" Full HD capacitiva para una interacción intuitiva.</p>
-      </div>
-      <div class="spec-item">
-        <h3>Conectividad</h3>
-        <p>Wi-Fi, Ethernet y módulo 4G opcional para mayor flexibilidad.</p>
-      </div>
-      <div class="spec-item">
-        <h3>Impresora</h3>
-        <p>Impresora térmica de 80mm con corte automático y salida rápida.</p>
-      </div>
-      <div class="spec-item">
-        <h3>Procesador</h3>
-        <p>Procesador Quad-core, 4GB de RAM y SSD de 64GB para alto rendimiento.</p>
-      </div>
-      <div class="spec-item">
-        <h3>Fuente de alimentación</h3>
-        <p>110–240V eficiente con protección contra sobretensiones integrada.</p>
-      </div>
-      <div class="spec-item">
-        <h3>Módulos adicionales</h3>
-        <p>Escáner de códigos, NFC o lector de huellas (opcionales).</p>
-      </div>
-    </div>
-  </section>
 
   <section class="testimonials-carousel" id="testimonials">
     <h2>Testimonios</h2>
@@ -149,32 +175,41 @@
     </div>
   </section>
 
-  <section class="form-section" id="contact">
+<section class="form-section" id="contact">
+  <div class="contact-wrapper">
     <h2>Contacto</h2>
-    <div class="contact-container">
-      <div class="contact-form">
-        <p>¿Tenés dudas o querés implementar Self en tu negocio? Completá el formulario y te responderemos a la brevedad.</p>
-        <form>
-          <input type="text" placeholder="Nombre" required>
-          <input type="email" placeholder="Correo electrónico" required>
-          <textarea rows="4" placeholder="Mensaje" required></textarea>
-          <button type="submit">Enviar</button>
-        </form>
-      </div>
+    <p class="contact-subtitle">¿Querés implementar Self en tu negocio? Completá el formulario o escribinos directamente.</p>
 
-      <div class="contact-details">
+    <div class="contact-content">
+
+      <form class="contact-form">
+        <div class="form-group">
+          <input type="text" placeholder="Nombre completo" required>
+          <input type="email" placeholder="Correo electrónico" required>
+        </div>
+        <textarea rows="5" placeholder="Contanos tu consulta..." required></textarea>
+        <button type="submit">Enviar mensaje</button>
+      </form>
+
+
+      <div class="contact-info">
         <h3>También podés escribirnos</h3>
-        <p><strong>Email:</strong> contacto@self.com.ar</p>
-        <p><strong>Teléfono:</strong> +54 11 2345-6789</p>
-        <p><strong>Ubicación:</strong> Buenos Aires, Argentina</p>
-        <a href="https://wa.me/5491123456789" target="_blank" rel="noopener" class="whatsapp-inline">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#25D366" viewBox="0 0 16 16">
-            <path d="M13.601 2.326A7.85..." />
-          </svg> Contactanos por WhatsApp
-        </a>
+        <ul>
+          <li><strong>Email:</strong> contacto@self.com.ar</li>
+          <li><strong>Teléfono:</strong> +54 11 2345-6789</li>
+          <li><strong>Ubicación:</strong> Buenos Aires, Argentina</li>
+        </ul>
+          <a href="https://wa.me/5491123456789" target="_blank" class="whatsapp-inline">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6C2BD9" viewBox="0 0 24 24">
+              <path d="M20.52 3.48A11.89 11.89 0 0 0 12 0C5.37 0 0 5.37 0 12a11.94 11.94 0 0 0 1.63 6L0 24l6.38-1.68A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.19-3.48-8.52zM12 22.05a10 10 0 0 1-5.14-1.41l-.37-.22-3.79 1 1-3.66-.24-.38A9.97 9.97 0 1 1 12 22.05zm5.47-7.76c-.3-.15-1.79-.88-2.07-.98-.28-.1-.48-.15-.68.15s-.78.97-.95 1.17c-.17.2-.35.22-.65.07s-1.27-.47-2.42-1.5a8.9 8.9 0 0 1-1.65-2.06c-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.93-2.23s-.5-.5-.68-.5h-.57c-.2 0-.52.08-.8.37-.28.3-1.06 1.03-1.06 2.5s1.09 2.9 1.24 3.1c.15.2 2.14 3.27 5.2 4.58.73.31 1.3.5 1.74.63.73.23 1.4.2 1.92.13.58-.09 1.79-.73 2.05-1.43.25-.7.25-1.3.17-1.43-.07-.13-.27-.2-.57-.35z"/>
+            </svg>
+            Contactanos por WhatsApp
+          </a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <div id="contact-panel" class="contact-panel">
     <button id="close-contact" class="close-btn">&times;</button>
@@ -188,10 +223,24 @@
   </div>
 
   <a href="https://wa.me/5491123456789" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat por WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-      <path d="M13.601 2.326A7.85..." />
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#6C2BD9" class="bi bi-whatsapp" viewBox="0 0 16 16">
+      <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
     </svg>
   </a>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 Self. Todos los derechos reservados.</p>
+      <nav class="footer-nav">
+        <a href="#features">Características</a> |
+        <a href="#specs">Especificaciones</a> |
+        <a href="#testimonials">Testimonios</a> |
+        <a href="#contact">Contacto</a>
+      </nav>
+    </div>
+  </footer>
+
+
 
   <script>
     const heroImage = document.getElementById('heroImage');
@@ -262,5 +311,11 @@
 
     startAutoScroll();
   </script>
+  <script>
+  function toggleSpec(el) {
+    el.classList.toggle('open');
+  }
+</script>
+
 </body>
 </html>
