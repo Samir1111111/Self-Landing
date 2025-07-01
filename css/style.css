@@ -5,6 +5,7 @@
   --blanco: #FFFFFF;
   --gris-humo: #EDEDED;
   --gris-oscuro: #333333;
+  --gris-claro: #BDBDBD;
   --celeste-claro: #A0E7E5;
   --fuente-principal: 'Inter', sans-serif;
   --fuente-secundaria: 'Montserrat', sans-serif;
@@ -16,7 +17,7 @@
 }
 body {
   font-family: var(--fuente-principal);
-  background-color: var(--blanco);
+  background-color: var(--violeta-claro);
   color: var(--gris-oscuro);
   line-height: 1.6;
 }
@@ -83,7 +84,7 @@ nav a {
   padding: 3rem 2rem;
 }
 .benefits {
-  background-color: #fdfcff;
+  background-color: #ffffff;
   padding: 4rem 2rem;
 }
 
@@ -156,7 +157,8 @@ nav a {
 }
 .testimonials-carousel {
   padding: 4rem 0;
-  background: var(--violeta-oscuro);
+  background: radial-gradient(circle, #6C2BD9 0%, #B799FF 100%);
+  color: var(--blanco);
 }
 
 .testimonials-carousel h2,
@@ -167,106 +169,50 @@ nav a {
   padding: 0 2rem;
 }
 
-.carousel-container {
-  position: relative;
-  overflow: hidden;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
-  -ms-overflow-style: none;     /* IE y Edge */
-  scrollbar-width: none;        /* Firefox */
-}
-.carousel-container::-webkit-scrollbar {
-  display: none;                /* Chrome, Safari */
-}
-/* El efecto de fundido se aplica al contenedor que tiene el overflow */
-.carousel-container::before,
-.carousel-container::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100px;
-  z-index: 0; /* Esto lo baja al fondo */
-  pointer-events: none;
-}
-
-
-.carousel-container::before {
-  left: 0;
-  background: linear-gradient(to right, var(--violeta-oscuro), transparent);
-}
-
-.carousel-container::after {
-  right: 0;
-  background: linear-gradient(to left, var(--violeta-oscuro), transparent);
-}
-
-.carousel-track {
+.testimonial-fade-wrapper {
   display: flex;
+  width: 100%;
+  height: auto;
   gap: 2rem;
-  width: calc((300px + 2rem) * 14);
-  animation: scroll 60s linear infinite;
-  position: relative;
-  z-index: 1; /* Asegura que las tarjetas estén por encima del fondo */
+  padding: 3rem 2rem;
+  box-sizing: border-box;
 }
 
-
-.testimonial-card {
-  background-color: var(--blanco);
-  border-radius: 16px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-  padding: 2rem;
-  width: 300px;
-  min-height: 270px;
-  flex-shrink: 0;
-  text-align: center;
-  transition: transform 0.2s ease;
+.testimonial-fade-card {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.testimonial-card:hover {
-  transform: scale(1.03);
-}
-
-.testimonial-photo {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-  align-self: center;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.5s ease;
+  opacity: 1;
 }
 
 .testimonial-stars {
+  font-size: 24px;
   color: #FFD700;
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 16px;
 }
 
 .testimonial-text {
-  font-style: italic;
-  margin-bottom: 1rem;
-  flex-grow: 1;
-  white-space: normal;
-  word-wrap: break-word;
+  font-size: 20px;
+  margin-bottom: 12px;
+  font-weight: 500;
+  color: #333;
 }
 
 .testimonial-author {
-  font-weight: bold;
-  color: var(--gris-oscuro);
+  font-size: 16px;
+  font-style: italic;
+  color: #666;
 }
 
-.testimonial-subtitle {
-  text-align: center;
-  color: var(--blanco);
-  margin-top: -1rem;
-  margin-bottom: 2rem;
-  font-size: 1rem;
+.fade-out {
+  opacity: 0 !important;
 }
-
 .form-section {
   padding: 60px 20px;
   background-color: #EDEDED;
@@ -486,7 +432,7 @@ footer {
 
 .specs-interactive {
   padding: 4rem 2rem;
-  background-color: var(--blanco);
+  background-color: #fdfcff;
   position: relative;
   text-align: center;
 }
@@ -534,12 +480,12 @@ footer {
 
 /* Posicionamiento */
 .left.top    { top: 10%; left: 0; }
-.left.middle { top: 45%; left: 0; }
-.left.bottom { bottom: 10%; left: 0; }
+.left.middle { top: 35%; left: 0; }
+.left.bottom { top: 70%; bottom: auto; left: 0;}
 
 .right.top    { top: 10%; right: 0; }
-.right.middle { top: 45%; right: 0; }
-.right.bottom { bottom: 10%; right: 0; }
+.right.middle { top: 35%; right: 0; }
+.right.bottom { top: 70%; bottom: auto; right: 0;}
 
 /* Descripción oculta/visible */
 .spec-box p {
@@ -710,4 +656,17 @@ footer {
 .footer-nav a:hover {
   color: var(--violeta-claro);
   text-decoration: none; 
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus,
+.footer-nav a:active {
+  text-decoration: none !important;
+  color: var(--violeta-claro);
+}
+
+.transition-gradient {
+  background: linear-gradient(to top, #ffffff 0%, #f3f0ff 50%, #B799FF 100%);
+  height: 160px;
+  width: 100%;
 }

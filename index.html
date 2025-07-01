@@ -30,6 +30,9 @@
       <img class="hero-image" id="heroImage" src="assets/image.png" alt="Imagen de kiosco Self">
     </div>
   </section>
+  
+  <div class="transition-gradient"></div>
+  <section class="specs">  </section>
 
   <section class="benefits" id="features">
     <h2>Características principales</h2>
@@ -72,7 +75,7 @@
     <section class="specs-interactive" id="specs">
     <h2>Especificaciones</h2>
     <div class="specs-wrapper">
-      <img src="assets/kiosco.png" alt="Kiosco Self" class="specs-image">
+      <img src="assets/image.png" alt="Kiosco Self" class="specs-image">
 
       <!-- IZQUIERDA -->
       <div class="spec-box left top" onclick="toggleSpec(this)">
@@ -112,66 +115,10 @@
   <section class="testimonials-carousel" id="testimonials">
     <h2>Testimonios</h2>
     <p class="testimonial-subtitle">Mirá cómo Self está revolucionando negocios reales</p>
-    <div class="carousel-container" id="carouselContainer">
-      <div class="carousel-track" id="carouselTrack">
 
-        <div class="testimonial-card">
-          <img src="assets/laura.jpg" alt="Laura M." class="testimonial-photo">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"El kiosco de Self transformó nuestras operaciones. Ahora todo es más rápido y seguro."</p>
-          <p class="testimonial-author">Laura M.</p>
-        </div>
-
-        <div class="testimonial-card">
-          <img src="assets/martin.jpg" alt="Martín R." class="testimonial-photo">
-          <div class="testimonial-stars">★★★★☆</div>
-          <p class="testimonial-text">"Es intuitivo y veloz. Reducimos notablemente las filas en el local."</p>
-          <p class="testimonial-author">Martín R.</p>
-        </div>
-
-        <div class="testimonial-card">
-          <img src="assets/julia.jpg" alt="Julia F." class="testimonial-photo">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"No esperaba una integración tan sencilla. Self es un antes y un después para mi negocio."</p>
-          <p class="testimonial-author">Julia F.</p>
-        </div>
-
-        <div class="testimonial-card">
-          <img src="assets/carlos.jpg" alt="Carlos T." class="testimonial-photo">
-          <div class="testimonial-stars">★★★★☆</div>
-          <p class="testimonial-text">"Al principio dudaba, pero después de una semana ya estábamos ahorrando tiempo y recursos."</p>
-          <p class="testimonial-author">Carlos T.</p>
-        </div>
-
-        <div class="testimonial-card">
-          <img src="assets/valentina.jpg" alt="Valentina C." class="testimonial-photo">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"Nuestros clientes lo usan sin problemas, incluso los mayores. La experiencia es muy fluida."</p>
-          <p class="testimonial-author">Valentina C.</p>
-        </div>
-
-        <div class="testimonial-card">
-          <img src="assets/rodrigo.jpg" alt="Rodrigo P." class="testimonial-photo">
-          <div class="testimonial-stars">★★★☆☆</div>
-          <p class="testimonial-text">"Hubo un par de detalles técnicos al inicio, pero el soporte fue excelente. Ya lo estamos usando al 100%."</p>
-          <p class="testimonial-author">Rodrigo P.</p>
-        </div>
-
-        <div class="testimonial-card">
-          <img src="assets/sofia.jpg" alt="Sofía G." class="testimonial-photo">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"Nos ayudó a automatizar pagos y reducir la carga del personal. Muy recomendable."</p>
-          <p class="testimonial-author">Sofía G.</p>
-        </div>
-
-        <div class="testimonial-card">
-          <img src="assets/laura.jpg" alt="Laura M." class="testimonial-photo">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"El kiosco de Self transformó nuestras operaciones. Ahora todo es más rápido y seguro."</p>
-          <p class="testimonial-author">Laura M.</p>
-        </div>
-
-      </div>
+    <div class="testimonial-fade-wrapper">
+      <div class="testimonial-fade-card" id="leftTestimonial"></div>
+      <div class="testimonial-fade-card" id="rightTestimonial"></div>
     </div>
   </section>
 
@@ -241,7 +188,65 @@
   </footer>
 
 
+  <script>
+    const leftContainer = document.getElementById('leftTestimonial');
+    const rightContainer = document.getElementById('rightTestimonial');
 
+    const leftTestimonials = [
+      { stars: '★★★★★', text: '“El kiosco de Self transformó nuestras operaciones. Todo es más rápido.”', author: 'Laura M.' },
+      { stars: '★★★★☆', text: '“Nos ayudó a automatizar pagos y reducir la carga del personal.”', author: 'Sofía G.' },
+      { stars: '★★★★★', text: '“Una solución práctica e intuitiva. Lo recomendamos totalmente.”', author: 'Diego L.' }
+    ];
+
+    const rightTestimonials = [
+      { stars: '★★★★☆', text: '“Reducimos notablemente las filas en el local.”', author: 'Martín R.' },
+      { stars: '★★★☆☆', text: '“Al principio dudaba, pero ya estamos ahorrando recursos.”', author: 'Carlos T.' },
+      { stars: '★★★★★', text: '“Una experiencia fluida para los clientes más grandes también.”', author: 'Valentina C.' }
+    ];
+
+    let leftIndex = 0;
+    let rightIndex = 0;
+    let interval;
+
+    function renderTestimonial(container, testimonial) {
+      container.innerHTML = `
+        <div class="testimonial-stars">${testimonial.stars}</div>
+        <p class="testimonial-text">${testimonial.text}</p>
+        <p class="testimonial-author">${testimonial.author}</p>
+      `;
+    }
+
+    function changeTestimonials() {
+      leftIndex = (leftIndex + 1) % leftTestimonials.length;
+      rightIndex = (rightIndex + 1) % rightTestimonials.length;
+
+      leftContainer.classList.add('fade-out');
+      rightContainer.classList.add('fade-out');
+
+      setTimeout(() => {
+        renderTestimonial(leftContainer, leftTestimonials[leftIndex]);
+        renderTestimonial(rightContainer, rightTestimonials[rightIndex]);
+
+        leftContainer.classList.remove('fade-out');
+        rightContainer.classList.remove('fade-out');
+      }, 500);
+    }
+
+    function startRotation() {
+      interval = setInterval(changeTestimonials, 4000);
+    }
+
+    function stopRotation() {
+      clearInterval(interval);
+    }
+
+    renderTestimonial(leftContainer, leftTestimonials[leftIndex]);
+    renderTestimonial(rightContainer, rightTestimonials[rightIndex]);
+    startRotation();
+
+    document.querySelector('.testimonial-fade-wrapper').addEventListener('mouseenter', stopRotation);
+    document.querySelector('.testimonial-fade-wrapper').addEventListener('mouseleave', startRotation);
+  </script>
   <script>
     const heroImage = document.getElementById('heroImage');
     const imagesToCycle = [
