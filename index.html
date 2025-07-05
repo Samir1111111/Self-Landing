@@ -10,12 +10,17 @@
 <body>
   <header>
     <a href="index.html" class="logo">Self</a>
-    <nav>
-      <a href="#features">Características</a>
-      <a href="#specs">Especificaciones</a>
-      <a href="#testimonials">Testimonios</a>
-      <a href="#contact">Contacto</a>
-      <a href="#" class="login-btn">Iniciar sesión</a>
+    <nav class="nav-container">
+      <button class="hamburger" id="hamburgerBtn" aria-label="Menú">
+        ☰
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#features">Características</a></li>
+        <li><a href="#specs">Especificaciones</a></li>
+        <li><a href="#testimonials">Testimonios</a></li>
+        <li><a href="#contact">Contacto</a></li>
+        <li><a href="#" class="login-btn">Iniciar sesión</a></li>
+      </ul>
     </nav>
   </header>
 
@@ -187,7 +192,21 @@
     </div>
   </footer>
 
+  <script>
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navLinks = document.getElementById('navLinks');
 
+    hamburgerBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+
+    // Opcional: cerrar el menú al hacer click fuera
+    window.addEventListener('click', (e) => {
+      if (!navLinks.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+        navLinks.classList.remove('show');
+      }
+    });
+  </script>
   <script>
     const leftContainer = document.getElementById('leftTestimonial');
     const rightContainer = document.getElementById('rightTestimonial');
