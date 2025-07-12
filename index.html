@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Totems Self de autogestión inteligente. Agilizá tus transacciones de forma segura, moderna y eficiente.">
+  <meta name="keywords" content="totem, autogestión, terminal de pagos, kiosk, self service">
+  <meta name="author" content="Self">
+  <title>Self - Autogestión inteligente</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+    <a href="index.html" class="logo">Self</a>
+    <a href="https://mediterraneasa.com/" target="_blank" class="powered-by">powered by Mediterranea</a>
+    </div>
+    <nav>
+      <a href="#features">Características</a>
+      <a href="#specs">Especificaciones</a>
+      <a href="#contact">Contacto</a>
+      <a href="pages/compra.html" class="purchase-btn">Comprar</a>
+      <a href="#" class="login-btn">Iniciar sesión</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-card">
+        <div class="hero-text">
+          <h1>Autogestión inteligente. Simple. Self.</h1>
+          <p>
+            Agilizá las transacciones con nuestros totems de autogestión diseñados para una gestión económica eficiente, segura y fácil de usar.
+          </p>
+          <div class="price-demo">
+            <button id="price-btn" class="fancy-btn violet-btn">Cargando precio…</button>
+            <button id="demo-btn" class="fancy-btn grey-btn">Solicitar demo</button>
+          </div>
+        </div>
+        <img class="hero-image" id="heroImage" src="assets/image.png" alt="Imagen de kiosco Self">
+      </div>
+    </section>
+
+    <section class="specs">  </section>
+    <section class="benefits" id="features">
+      <h2>Características principales</h2>
+      <p class="benefits-subtitle">Diseñado para optimizar tu operación desde el primer uso</p>
+
+      <ul class="benefit-list-alt">
+        <li>
+          <img src="assets/icono-seguridad.png" alt="Seguridad" class="benefit-icon-alt" />
+          <div>
+            <h3>Seguridad avanzada</h3>
+            <p>Cifrado y controles de acceso que protegen tu información en todo momento.</p>
+          </div>
+        </li>
+        <li>
+          <img src="assets/icono-diseño.png" alt="Diseño" class="benefit-icon-alt" />
+          <div>
+            <h3>Diseño intuitivo</h3>
+            <p>Experiencia de usuario simple, clara y accesible para todos.</p>
+          </div>
+        </li>
+        <li>
+          <img src="assets/icono-automatizacion.png" alt="Automatización" class="benefit-icon-alt" />
+          <div>
+            <h3>Automatización inteligente</h3>
+            <p>Disminución de costos operativos mediante procesos autónomos y eficientes.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="specs-interactive" id="specs">
+      <h2>Especificaciones</h2>
+      <div class="specs-wrapper">
+        <div class="cards">
+          <div class="card red">
+              <p class="tip">Pantalla táctil</p>
+              <p class="second-text">15.6" Full HD capacitiva</p>
+          </div>
+          <div class="card blue">
+              <p class="tip">Procesador</p>
+              <p class="second-text">Quad-core, 4GB RAM, SSD 64GB</p>
+          </div>
+          <div class="card green">
+              <p class="tip">Conectividad</p>
+              <p class="second-text">Wi-Fi, Ethernet, 4G opcional</p>
+          </div>
+          <div class="card red">
+              <p class="tip">Alimentación</p>
+              <p class="second-text">110–240V, protección contra sobretensión</p>
+          </div>
+          <div class="card blue">
+              <p class="tip">Impresora</p>
+              <p class="second-text">Térmica de 80mm con corte automático</p>
+          </div>
+          <div class="card green">
+              <p class="tip">Módulos adicionales</p>
+              <p class="second-text">NFC, escáner de códigos, huellas</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials-carousel" id="testimonials">
+      <h2>Testimonios</h2>
+      <p class="testimonial-subtitle">Mirá cómo Self está revolucionando negocios reales</p>
+      <div class="testimonial-fade-wrapper">
+        <div class="testimonial-fade-card" id="leftTestimonial"></div>
+        <div class="testimonial-fade-card" id="rightTestimonial"></div>
+      </div>
+    </section>
+
+    <section class="form-section" id="contact">
+      <div class="wave-full-bg">
+        <svg viewBox="0 0 1440 800" preserveAspectRatio="none">
+          <path d="M0,224L80,213.3C160,203,320,181,480,202.7C640,224,800,288,960,288C1120,288,1280,224,1360,192L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+        </svg>
+      </div>
+      <div class="wave-overlay">
+        <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <path fill="white" fill-opacity="0.1" d="M0,96L60,106.7C120,117,240,139,360,133.3C480,128,600,96,720,106.7C840,117,960,171,1080,165.3C1200,160,1320,96,1380,64L1440,32V0H1380C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0H0Z"></path>
+        </svg>
+      </div>
+
+      <div class="contact-wrapper">
+        <h2>Contacto</h2>
+        <p class="contact-subtitle">¿Querés implementar Self en tu negocio? Completá el formulario o escribinos directamente.</p>
+        <div class="contact-content">
+          <form class="contact-form">
+            <div class="form-group">
+              <input type="text" placeholder="Nombre completo" required>
+              <input type="email" placeholder="Correo electrónico" required>
+            </div>
+            <textarea rows="5" placeholder="Contanos tu consulta..." required></textarea>
+            <button type="submit">Enviar mensaje</button>
+          </form>
+        <div class="contact-info">
+        <h3>También podés escribirnos</h3>
+        <ul>
+          <li><strong>Email:</strong> contacto@self.com.ar</li>
+          <li><strong>Teléfono:</strong> +54 11 2345-6789</li>
+          <li><strong>Ubicación:</strong> Buenos Aires, Argentina</li>
+        </ul>
+        <div class="social-icons">
+        <a href="https://instagram.com/self" target="_blank" aria-label="Instagram">
+          <img src="assets/image5.png" alt="Instagram" width="32" height="32">
+        </a>
+        <a href="https://facebook.com/self" target="_blank" aria-label="Facebook">
+          <img src="assets/image6.png" alt="Facebook" width="32" height="32">
+        </a>
+        <a href="https://tiktok.com/@self" target="_blank" aria-label="TikTok">
+          <img src="assets/image7.webp" alt="TikTok" width="32" height="32">
+        </a>
+      </div>
+    </section>
+    <section>
+      <div id="contact-panel" class="contact-panel">
+        <button id="close-contact" class="close-btn">&times;</button>
+        <h2>Contacto</h2>
+        <form>
+          <input type="text" placeholder="Nombre" required>
+          <input type="email" placeholder="Correo electrónico" required>
+          <textarea rows="4" placeholder="Mensaje" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+        <div class="iconos-redes">
+          <ul>
+            <li>
+              <a href="https://instagram.com/self" target="_blank" class="instagram-btn" aria-label="Instagram">
+                <img src="assets/image5.png" alt="Instagram" width="32" height="32">
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a href="https://facebook.com/self" target="_blank" class="facebook-btn" aria-label="Facebook">
+                <img src="assets/image6.png" alt="Facebook" width="32" height="32">
+                Facebook
+              </a>
+            </li>
+            <li>
+              <a href="https://tiktok.com/@self" target="_blank" class="tiktok-btn" aria-label="TikTok">
+                <img src="assets/image7.webp" alt="TikTok" width="32" height="32">
+                Tiktok
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section>
+      <a href="https://wa.me/5491123456789" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat por WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#6C2BD9" class="bi bi-whatsapp" viewBox="0 0 16 16">
+          <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+        </svg>
+      </a>
+    </section>
+    <section>
+      <div id="login-modal" class="login-modal">
+        <div class="login-content">
+          <span id="close-login" class="close-login">&times;</span>
+
+          <div id="form-login">
+            <h2>Iniciar sesión</h2>
+            <input type="text" placeholder="Usuario">
+            <input type="password" placeholder="Contraseña">
+            <button>Entrar</button>
+            <p class="switch-form">¿No tenés cuenta? <a href="#" id="show-register">Registrate</a></p>
+          </div>
+
+          <div id="form-register" class="hidden">
+            <h2>Registrarse</h2>
+            <input type="text" placeholder="Nombre completo">
+            <input type="email" placeholder="Correo electrónico">
+            <input type="password" placeholder="Contraseña">
+            <button>Crear cuenta</button>
+            <p class="switch-form">¿Ya tenés cuenta? <a href="#" id="show-login">Iniciá sesión</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-columns">
+        <div class="footer-logo">
+          <p><strong>Self</strong></p>
+          <p>Autogestión inteligente</p>
+        </div>
+        <div class="footer-nav">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#features">Características</a></li>
+            <li><a href="#specs">Especificaciones</a></li>
+            <li><a href="#contact">Contacto</a></li>
+            <li><a href="#testimonials">Testimonios</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contacto</h4>
+          <ul>
+            <li><strong>Email:</strong> contacto@self.com.ar</li>
+            <li><strong>Teléfono:</strong> +54 11 2345-6789</li>
+            <li><strong>Ubicación:</strong> Buenos Aires, Argentina</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Self. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    const heroImage = document.getElementById('heroImage');
+    const imagesToCycle = [
+      'assets/image.png',
+      'assets/image2.png',
+      'assets/image3.png',
+      'assets/image4.png'
+    ];
+
+    let currentIndex = 0;
+
+    function changeImageWithFade() {
+      heroImage.classList.add('is-changing');
+
+      setTimeout(() => {
+        currentIndex = (currentIndex + 1) % imagesToCycle.length;
+        heroImage.src = imagesToCycle[currentIndex];
+        void heroImage.offsetWidth;
+        heroImage.classList.remove('is-changing');
+      }, 500);
+    }
+
+    setInterval(changeImageWithFade, 4000);
+  </script>
+
+  <script>
+    const contactBtn = document.querySelector('a[href="#contact"]');
+    const contactPanel = document.getElementById('contact-panel');
+    const closeBtn = document.getElementById('close-contact');
+
+    contactBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      contactPanel.classList.add('open');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      contactPanel.classList.remove('open');
+    });
+
+    window.addEventListener('click', (e) => {
+      if (contactPanel.classList.contains('open') && !contactPanel.contains(e.target) && !contactBtn.contains(e.target)) {
+        contactPanel.classList.remove('open');
+      }
+    });
+  </script>
+
+  <script>
+    const loginBtn = document.querySelector('.login-btn');
+    const loginModal = document.getElementById('login-modal');
+    const closeLogin = document.getElementById('close-login');
+
+    const formLogin = document.getElementById('form-login');
+    const formRegister = document.getElementById('form-register');
+    const showRegister = document.getElementById('show-register');
+    const showLogin = document.getElementById('show-login');
+
+    function showForm(formToShow, formToHide) {
+      formToHide.classList.add('hidden');
+      setTimeout(() => {
+        formToShow.classList.remove('hidden');
+      }, 100); // pequeño delay para permitir que la transición de salida se note
+    }
+
+    loginBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    loginModal.classList.add('open');
+    formLogin.classList.remove('hidden');
+    formRegister.classList.add('hidden');
+    });
+
+    closeLogin.addEventListener('click', () => {
+      loginModal.classList.remove('open');
+    });
+
+    window.addEventListener('click', (e) => {
+      if (e.target == loginModal) {
+        loginModal.classList.remove('open');
+      }
+    });
+
+
+    showRegister.addEventListener('click', (e) => {
+      e.preventDefault();
+      showForm(formRegister, formLogin);
+    });
+
+    showLogin.addEventListener('click', (e) => {
+      e.preventDefault();
+      showForm(formLogin, formRegister);
+    });
+  </script>
+  <script>
+    async function actualizarPrecio() {
+      try {
+        const res = await fetch("https://www.dolarhoy.com/cotizaciondolarblue", { mode: "cors" });
+        const text = await res.text();
+        const match = text.match(/\$([0-9,.]+)/);
+        const blue = match ? parseFloat(match[1].replace('.', '').replace(',', '.')) : null;
+
+        if (blue) {
+          const precioUSD = 1800;
+          const precioARS = Math.round(precioUSD * blue).toLocaleString("es-AR");
+          document.getElementById("price-btn").textContent = `${precioARS} ARS`;
+        } else {
+          document.getElementById("price-btn").textContent = "Error al obtener precio";
+        }
+      } catch (e) {
+        console.error("No se pudo actualizar el precio:", e);
+        document.getElementById("price-btn").textContent = "Error al obtener precio";
+      }
+    }
+  </script>
+  <script>
+    async function actualizarPrecio() {
+      try {
+        const res = await fetch("https://dolarapi.com/v1/dolares/oficial");
+        const data = await res.json();
+
+        const oficial = parseFloat(data.compra);
+        const precioUSD = 1800;
+        const precioARS = Math.round(precioUSD * oficial).toLocaleString("es-AR");
+
+        const precioBtn = document.querySelector("#price-btn");
+        if (precioBtn) {
+          precioBtn.textContent = `${precioARS} ARS`;
+        }
+      } catch (e) {
+        console.error("No se pudo actualizar el precio:", e);
+        const precioBtn = document.querySelector("#price-btn");
+        if (precioBtn) {
+          precioBtn.textContent = "Error";
+        }
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      actualizarPrecio();
+      setInterval(actualizarPrecio, 60 * 60 * 1000);
+    });
+  </script>
+  <script>
+    const leftContainer = document.getElementById('leftTestimonial');
+    const rightContainer = document.getElementById('rightTestimonial');
+
+    const leftTestimonials = [
+      { stars: '★★★★★', text: '“El totem de Self transformó nuestras operaciones. Todo es más rápido.”', author: 'Laura M.' },
+      { stars: '★★★★☆', text: '“Nos ayudó a automatizar pagos y reducir la carga del personal.”', author: 'Sofía G.' },
+      { stars: '★★★★★', text: '“Una solución práctica e intuitiva. Lo recomendamos totalmente.”', author: 'Diego L.' }
+    ];
+
+    const rightTestimonials = [
+      { stars: '★★★★☆', text: '“Reducimos notablemente las filas en el local.”', author: 'Martín R.' },
+      { stars: '★★★☆☆', text: '“Al principio dudaba, pero ya estamos ahorrando recursos.”', author: 'Carlos T.' },
+      { stars: '★★★★★', text: '“Una experiencia fluida para los clientes más grandes también.”', author: 'Valentina C.' }
+    ];
+
+    let leftIndex = 0;
+    let rightIndex = 0;
+    let interval;
+
+    function renderTestimonial(container, testimonial) {
+      container.innerHTML = `
+        <div class="testimonial-stars">${testimonial.stars}</div>
+        <p class="testimonial-text">${testimonial.text}</p>
+        <p class="testimonial-author">${testimonial.author}</p>
+      `;
+    }
+
+    function changeTestimonials() {
+      leftIndex = (leftIndex + 1) % leftTestimonials.length;
+      rightIndex = (rightIndex + 1) % rightTestimonials.length;
+
+      leftContainer.classList.add('fade-out');
+      rightContainer.classList.add('fade-out');
+
+      setTimeout(() => {
+        renderTestimonial(leftContainer, leftTestimonials[leftIndex]);
+        renderTestimonial(rightContainer, rightTestimonials[rightIndex]);
+
+        leftContainer.classList.remove('fade-out');
+        rightContainer.classList.remove('fade-out');
+      }, 500);
+    }
+
+    function startRotation() {
+      interval = setInterval(changeTestimonials, 4000);
+    }
+
+    function stopRotation() {
+      clearInterval(interval);
+    }
+
+    renderTestimonial(leftContainer, leftTestimonials[leftIndex]);
+    renderTestimonial(rightContainer, rightTestimonials[rightIndex]);
+    startRotation();
+
+    document.querySelector('.testimonial-fade-wrapper').addEventListener('mouseenter', stopRotation);
+    document.querySelector('.testimonial-fade-wrapper').addEventListener('mouseleave', startRotation);
+  </script>
+</body>
+</html>
